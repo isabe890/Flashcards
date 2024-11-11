@@ -1,4 +1,4 @@
-
+/* Estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +20,7 @@ h1 {
     color: #444;
 }
 
+/* Container dos flashcards */
 .flashcard-container {
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +28,7 @@ h1 {
     margin-top: 30px;
 }
 
+/* Estilos dos flashcards */
 .flashcard {
     width: 150px;
     height: 200px;
@@ -50,18 +52,19 @@ h1 {
 }
 
 .flashcard .front {
-    background-color: #4caf50;
+    background-color: #4caf50; /* Cor verde para a frente do cartão */
 }
 
 .flashcard .back {
-    background-color: #ff5722; 
+    background-color: #ff5722; /* Cor laranja para o verso do cartão */
+    transform: rotateY(180deg); /* Esconde a parte de trás do cartão inicialmente */
 }
 
-
+/* Animação de virada do cartão */
 .flashcard.flipped .front {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Gira a frente do cartão para trás */
 }
 
 .flashcard.flipped .back {
-    transform: rotateY(0);
+    transform: rotateY(0); /* Mostra o verso do cartão */
 }
